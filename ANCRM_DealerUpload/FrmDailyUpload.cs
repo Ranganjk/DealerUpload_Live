@@ -15,12 +15,15 @@ namespace ANCRM_DealerUpload
 {
     public partial class FrmDailyUpload : Form
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SMART"].ToString());
+        #region "Declaration"
+ SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SMART"].ToString());
         public static DataTable dtSuccessData = new DataTable();
         public static DataTable dtFailedData = new DataTable();
         public static DataTable dtDealers = new DataTable();
         int tcount = 0, scount = 0, fcount = 0;
         string salesdate;
+        #endregion
+       
         public FrmDailyUpload()
         {
             InitializeComponent();            
